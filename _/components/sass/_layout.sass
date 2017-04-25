@@ -1,18 +1,151 @@
 // Base
 svg
-	display 			: block
+	@include transition (.5s)
+	display 								: block
+
+.wrap-contain
+	background-color 						: $MDS-bg
+	box-shadow 								: 0 0 50px #9f9f9f
+	margin 									: 0 auto
+	max-width 								: $screen-xl-min
+	@media (min-width: $screen-sm-min)
+		.container 	
+			width 							: 100%
+			padding-right 					: $lp-contain--pad 
+			padding-left 					: $lp-contain--pad
+	@media (min-width: $screen-md-min)
+		max-width 							: 100%
+		.container 	
+			width 							: 100%
+			padding-right 					: $lp-contain--pad 
+			padding-left 					: $lp-contain--pad 
+	@media (min-width: $screen-lg-min)
+		max-width 							: 100%
+		.container
+			width 							: 100%
+			padding-right 					: $lp-contain--pad 
+			padding-left 					: $lp-contain--pad 
+	@media (min-width: $screen-xl-min)
+		max-width 							: $screen-xl-min
+		.container
+			width 							: $screen-xl-min
+			padding-right 					: $lp-contain--pad 
+			padding-left 					: $lp-contain--pad
+
+#top-bar
+	background-color						: $MDS-bg
+	color 									: $MDS-teal
+	padding  								: .5em .5em .5em 0
+	@media (max-width: $screen-sm-max)
+		padding 							: .5em .5em .15em .5em
 
 // Nav 	
- 	
+ 
+.navbar
+	background-color 						: $MDS-bg	
+	margin-bottom 							: 0
+	border-radius 							: 0
+
+.navbar-toggle
+	margin-top 								: 15px
+	&:hover
+		.icon-bar 	
+			@include transition($trans)
+			background-color 				: $MDS-purp
+	.icon-bar 	
+		height 								: 3px
+		background-color 					: $MDS-teal
+		
+#main-logo	
+	@include transition($trans)
+	width 									: 12em
+	position 								: relative
+	top 									: -1em
+	@media (max-width: $screen-xs-max)
+		width 								: 10em
+		top 								: -.1em
+
+.soc-menu
+	display 								: inline-block
+	width 									: 10em
+	max-height 								: 3em
+	g
+		cursor 								: pointer
+	path
+		fill 								: $MDS-teal
+	rect
+		opacity 							: 0
+	a
+		&:hover
+			g
+				path
+					@include transition($trans)
+					fill 					: $MDS-purp
+
+.soc-icon
+	fill 								 	: $g2
+
+.nav
+	li
+		a:hover
+			text-decoration 				: none
+			background-color 				: $MDS-purp
+			color 							: $MDS-bg
+		a:focus
+			text-decoration 				: none
+			background-color 				: $MDS-bg
+			color 							: $MDS-teal
+	.open>a, .open>a:focus, .open>a:hover
+		background-color 					: $MDS-bg
+
+
+.dropdown-menu
+	background-color 						: $MDS-bg
+	li
+		a
+			color 							: $MDS-teal
+			&:hover
+				background-color 			: $MDS-purp
+				color 						: $g0
+	
  	
 // Main Content
- 	
- 	
+
+.fom
+	background-color 						: $MDS-bg
+	border 									: 6px solid $MDS-purp
+	border-radius 							: 22px
+	padding 								: 1.2em
+	h3
+		margin-top 							: 1.5em
+		margin-bottom 						: 1.5em
+	a
+		margin-bottom 						: 1em
+
+.event-cap
+	padding 								: .45em
+	margin-bottom 							: 2em
+	p
+		margin 								: 0
+
+.qa
+	padding 								: .5em 	
+ 
 // Secondary Content 	
  	
+
  	
 // Footer
- 	
+
+footer	
+	background-color 						: $MDS-teal
+	padding 								: 1.2em
+	p, a, small
+		color 								: white
+	.soc-menu
+		margin-top 							: .6em	
+		path						
+			fill 							: #ffffff
  	
 // Tablet
 

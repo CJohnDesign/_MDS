@@ -1,12 +1,39 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,400italic,700italic)
+// Functions
+
+@function tint($color, $percentage)
+	@return mix(white, $color, $percentage)
+
+@function shade($color, $percentage) 
+	@return mix(black, $color, $percentage)
+
+@function trans($color, $amount)
+	@return transparentize($color, $amount)
 
 
-$type  		 			: "Lato", san-serif
+// Type
 
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Fredoka+One|Hammersmith+One|Walter+Turncoat')
 
-// Currently red - Change accordingly
+$type  		 			: "Tahoma", san-serif
+$type-head  		 	: "Hammersmith One", san-serif
+$type-btn  				: "Fredoka One", san-serif
 
-$theme_color 			: #EF3F37
+$t1 					: 3.498em
+$t2 					: 2.627em
+$t3 					: 1.599em
+$t4 					: 1.3em
+$t5 					: 1.05em
+
+// Colors
+
+// Brand Colors
+
+$MDS-teal 		 		: #00B79A
+$MDS-purp 		 		: #4B2468
+$MDS-orange 	 		: #C44C27
+$MDS-green 		 		: #A2CD3A
+$MDS-black 				: #454546
+$MDS-bg 		 		: #F0F0D8
 
 // Grays from light to dark (g0-g4)
 
@@ -15,6 +42,29 @@ $g1 					: #929191
 $g2 					: #5A5B5B
 $g3 					: #2C2C2C
 $g4 					: #040707
+
+
+// Body
+
+$lp-contain--pad 		: 60px
+$border-radius 		 	: 1.5em
+
+// Nav
+
+$top-bar--height 		: 2.5em
+$nav--height 			: 5.5em
+$nav--li 				: 2em 1.2em
+
+//Forms
+$form--font-size 		: 1.2em
+$form--height 			: 2.25em
+$form--pad 				: 0.15em
+
+//Buttons
+
+$btn--border-radius 	: 4px
+$btn--color 			: #fff
+
 
 // Media Breaks
 
@@ -25,6 +75,7 @@ $screen-md-min 			: 992px
 $screen-sm-max 			: ($screen-md-min - 1)
 $screen-lg-min 			: 1200px
 $screen-md-max 			: ($screen-lg-min - 1)
+$screen-xl-min 			: 1440px
 
 
 $height-sm-min 			: 411px
@@ -34,4 +85,15 @@ $height-sm-max 			: ($height-md-min - 1)
 $height-lg-min 			: 992px
 $height-md-max 			: ($height-lg-min - 1)
 
+
+// Time
+
+$trans 					: .15s
+
+
+//Forms
+
+$form--font-size 		: 1.2em
+$form--height 			: 2.25em
+$form--pad 				: 1.75em 1em
 

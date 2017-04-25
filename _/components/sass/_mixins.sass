@@ -1,14 +1,49 @@
-@mixin coverbackground ($img-uri, $background-top: "center", $background-left: "center", $background-attachment: "fixed")
-	background: url($img-uri) no-repeat unquote($background-top) unquote($background-left) unquote($background-attachment)
-	-webkit-background-size: cover
-	-moz-background-size: cover
-	-o-background-size: cover
-	background-size: cover
-	color:transparent
+@mixin coverBackground ($img-uri, $background-top: "center", $background-left: "center")
+	background: url($img-uri) no-repeat unquote($background-top) unquote($background-left)
+	-webkit-background-size 	: cover
+	-moz-background-size 		: cover
+	-o-background-size 			: cover
+	background-size 			: cover
+	color 						: transparent
+	
+@mixin flex
+	display 					: -webkit-box
+	display 					: -moz-box
+	display 					: -ms-flexbox
+	display 					: -moz-flex
+	display 					: -webkit-flex
+	display 					: flex
 
 @mixin transition($args) 
-	-webkit-transition: $args
-	-moz-transition: $args
-	-ms-transition: $args
-	-o-transition: $args
-	transition: $args
+	-webkit-transition 			: $args
+	-moz-transition 			: $args
+	-ms-transition 				: $args
+	-o-transition 				: $args
+	transition 					: $args
+
+@mixin transformScale ($transElem)
+	transform 					: scale($transElem)
+	-moz-transform 				: scale($transElem)
+	-webkit-transform 			: scale($transElem)
+	-o-transform 				: scale($transElem)
+	-ms-transform 				: scale($transElem)
+
+
+@mixin grad 
+	box-shadow 					: inset 0 0 100px hsla(0,0%,0%,.3)
+	background-repeat	   		: no-repeat
+	-webkit-background-size 	: cover
+	-moz-background-size 		: cover
+	-o-background-size 			: cover
+	background-size 			: cover
+	color 						: transparent
+	background-position-y 		: top
+	background-position-x 		: center
+	
+
+@mixin hoverGrow
+	@include transition(.3s ease)
+	&:hover 								
+		@include transform__scale(1.1)
+	&:focus
+		@include transform__scale(1.1)
