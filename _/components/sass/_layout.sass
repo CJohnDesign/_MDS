@@ -1,37 +1,54 @@
 // Base
+
+html
+	@include transition ($trans)
+	background-color 						: $g0
+
+body 
+	background-color   						: $g0
+	color              						: $g1
+
 svg
 	@include transition (.5s)
 	display 								: block
 
 .wrap-contain
+	overflow 								: visible
 	background-color 						: $MDS-bg
-	box-shadow 								: 0 0 50px #9f9f9f
+	box-shadow 								: 0 0 25px $g1
 	margin 									: 0 auto
 	max-width 								: $screen-xl-min
 	@media (min-width: $screen-sm-min)
 		.container 	
 			width 							: 100%
-			padding-right 					: $lp-contain--pad 
-			padding-left 					: $lp-contain--pad
+			padding-right 					: $lp-contain-pad 
+			padding-left 					: $lp-contain-pad
 	@media (min-width: $screen-md-min)
 		max-width 							: 100%
 		.container 	
 			width 							: 100%
-			padding-right 					: $lp-contain--pad 
-			padding-left 					: $lp-contain--pad 
+			padding-right 					: $lp-contain-pad 
+			padding-left 					: $lp-contain-pad 
 	@media (min-width: $screen-lg-min)
 		max-width 							: 100%
 		.container
 			width 							: 100%
-			padding-right 					: $lp-contain--pad 
-			padding-left 					: $lp-contain--pad 
+			padding-right 					: $lp-contain-pad 
+			padding-left 					: $lp-contain-pad 
 	@media (min-width: $screen-xl-min)
 		max-width 							: $screen-xl-min
 		.container
 			width 							: $screen-xl-min
-			padding-right 					: $lp-contain--pad 
-			padding-left 					: $lp-contain--pad
+			padding-right 					: $lp-contain-pad 
+			padding-left 					: $lp-contain-pad
 
+
+.row
+	padding-bottom 						: 1em
+
+
+// Nav 	
+ 
 #top-bar
 	background-color						: $MDS-bg
 	color 									: $MDS-teal
@@ -39,8 +56,15 @@ svg
 	@media (max-width: $screen-sm-max)
 		padding 							: .5em .5em .15em .5em
 
-// Nav 	
- 
+#myNavbar
+	position  								: relative
+	right 									: -15px
+	max-width 								: 75%
+	float 									: right
+
+.navbar-header
+	z-index 								: 101
+
 .navbar
 	background-color 						: $MDS-bg	
 	margin-bottom 							: 0
@@ -109,18 +133,20 @@ svg
 				color 						: $g0
 	
  	
-// Main Content
+// Home
 
 .fom
 	background-color 						: $MDS-bg
 	border 									: 6px solid $MDS-purp
 	border-radius 							: 22px
-	padding 								: 1.2em
+	padding 								: 2em
 	h3
-		margin-top 							: 1.5em
+		margin-top 							: 1em
 		margin-bottom 						: 1.5em
 	a
 		margin-bottom 						: 1em
+	.btn
+		min-width 							: 88%
 
 .event-cap
 	padding 								: .45em
@@ -129,7 +155,11 @@ svg
 		margin 								: 0
 
 .qa
-	padding 								: .5em 	
+	padding 								: 1.5em 0 1.75em	
+	h2
+		margin-top 							: 5px
+	.btn
+		width 								: 100%
  
 // Secondary Content 	
  	
